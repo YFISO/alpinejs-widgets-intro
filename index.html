@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AlpineJS with external JavaScript</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        .main-container{
+            min-width: 400px;
+            max-width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container card mx-auto position-absolute top-50 start-50 translate-middle"x-data="Counter">
+        <div class="mb-2" x-text="count"></div>
+        <div>
+            <div class="d-flex">
+                <button class="w-50" @click="increment()">
+                    Increment
+                </button>
+                <button class="w-50" @click="decrement()">
+                        Decrement
+                </button>
+            </div>
+            
+            <div >
+                <button class="w-100" @click="reset()">
+                    Reset
+                </button>
+            </div>
+        </div>
+        
+        
+    </div>
+    <script src="counter.js"></script>
+</body>
+</html>
